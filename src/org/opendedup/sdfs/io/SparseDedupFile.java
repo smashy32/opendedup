@@ -803,10 +803,7 @@ public class SparseDedupFile implements DedupFile {
 									+ "] write fush [" + wt + "] bd sync ["
 									+ st + "]");
 				HCServiceProxy.sync();
-			} else {
-				this.writeCache();
 			}
-			
 			if (this.toOccured)
 				throw new IOException("timeout occured");
 		} catch (Exception e) {

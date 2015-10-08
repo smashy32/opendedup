@@ -252,8 +252,7 @@ private static EventBus eventBus = new EventBus();
 			int z = 0;
 			for (int i = 0; i < files.length; i++) {
 				MetaDataDedupFile buf = (MetaDataDedupFile) files[i];
-				if(buf.exists())
-					buf.sync();
+				buf.sync();
 				z++;
 			}
 			if (SDFSLogger.isDebug())
